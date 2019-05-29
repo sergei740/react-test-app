@@ -8,20 +8,13 @@ export default class LoginFormComponent extends React.Component {
   render() {
     return (
       <form className="loginForm">
-        <TextField
-          label="Name"
-          id="name"
-        />
-        <TextField
-          label="Password"
-          id="password"
-        />
+        <TextField label="Name" id="name"/>
+        <TextField label="Password" id="password"/>
         <NavLink to="/UserListPageComponent">
           <Button
             variant="contained"
             color="primary"
-            className="loginFormBtn"
-          >
+            className="loginFormBtn">
             Log In
           </Button>
         </NavLink>

@@ -27,8 +27,13 @@ export default class UsersTable extends React.Component {
                   <TableCell align="left">{ row.name }</TableCell>
                   <TableCell align="left">{ row.email }</TableCell>
                   <TableCell align="left">{ row.password }</TableCell>
-                  <TableCell align="left"><Button variant="contained" color="secondary"
-                                                  onClick={ () => this.props.removeUser(row) }>Delete</Button></TableCell>
+                  <TableCell align="left">
+                    <Button variant="contained"
+                            color="secondary"
+                            onClick={ () => this.props.removeUser(row) }>
+                      Delete
+                    </Button>
+                  </TableCell>
                 </TableRow>
               )) }
             </TableBody>

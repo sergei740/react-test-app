@@ -29,34 +29,28 @@ export default class UserListFormComponent extends React.Component {
           label="Name"
           id="name"
           value={ this.state.name }
-          onInput={ e => this.handleChange(e) }
-        />
+          onInput={ e => this.handleChange(e) }/>
         <TextField
           label="E-mail"
           id="email"
           value={ this.state.email }
-          onInput={ e => this.handleChange(e) }
-        />
+          onInput={ e => this.handleChange(e) }/>
         <TextField
           label="Password"
           id="password"
           value={ this.state.password }
-          onInput={ e => this.handleChange(e) }
-        />
+          onInput={ e => this.handleChange(e) }/>
         <Button
           variant="contained"
           color="primary"
           onClick={ () => {
             this.props.addState(this.state);
             this.clearInput();
-          } }
-        >
+          } }>
           Add
         </Button>
         <NavLink to="/">
-          <Button
-            variant="contained"
-          >
+          <Button variant="contained">
             Log Out
           </Button>
         </NavLink>
