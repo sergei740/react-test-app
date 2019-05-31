@@ -1,10 +1,10 @@
 import React from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import { NavLink } from "react-router-dom";
+import { DataService } from "../../../services/dataService";
+import { withRouter } from "react-router-dom";
 
-
-export default class UserListFormComponent extends React.Component {
+class UserListFormComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,6 +13,11 @@ export default class UserListFormComponent extends React.Component {
       password: ""
     };
   }
+
+  logOut = () => {
+    DataService.logOut();
+    this.props.history.push('/');
+  };
 
   handleChange = e => {
     this.setState({ [e.target.id]: e.target.value });
@@ -49,12 +54,13 @@ export default class UserListFormComponent extends React.Component {
           } }>
           Add
         </Button>
-        <NavLink to="/">
-          <Button variant="contained">
-            Log Out
-          </Button>
-        </NavLink>
+        <Button variant="contained"
+                onClick={ this.logOut }>
+          Log Out
+        </Button>
       </form>
     );
   }
 }
+
+export default withRouter(UserListFormComponent);

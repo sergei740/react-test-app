@@ -21,8 +21,7 @@ class LoginFormComponent extends React.Component {
   signIn = () => {
     DataService.signIn(this.state.login, this.state.password)
       .then(() => {
-        this.props.history.push('/UserListPageComponent');
-        console.log(this);
+        this.props.history.push('/list');
       });
   };
 
