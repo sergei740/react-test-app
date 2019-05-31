@@ -2,8 +2,10 @@ import React from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import { DataService } from "../../../services/dataService";
+import { withRouter } from "react-router-dom";
 
-export default class LoginFormComponent extends React.Component {
+
+class LoginFormComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,7 +22,7 @@ export default class LoginFormComponent extends React.Component {
     DataService.signIn(this.state.login, this.state.password)
       .then(() => {
         this.props.history.push('/UserListPageComponent');
-        // console.log(this);
+        console.log(this);
       });
   };
 
@@ -42,3 +44,5 @@ export default class LoginFormComponent extends React.Component {
     );
   }
 }
+
+export default withRouter(LoginFormComponent);

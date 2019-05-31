@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d592eab-1a78-47ee-8e0e-48f797363ec2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/loginPage/LoginPageComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loginPage/LoginPageComponent.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/loginPage/loginForm/LoginFormComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loginPage/loginForm/LoginFormComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/userListPage/UserListPageComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userListPage/UserListPageComponent.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -54,8 +48,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/loginPage/loginForm/LoginFormComponent.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+            <state relative-caret-position="440">
+              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -218,7 +212,7 @@
       <workItem from="1559117291020" duration="16810000" />
       <workItem from="1559219287382" duration="1423000" />
       <workItem from="1559238649106" duration="445000" />
-      <workItem from="1559289436639" duration="13240000" />
+      <workItem from="1559289436639" duration="14516000" />
     </task>
     <task id="LOCAL-00001" summary="routing added">
       <created>1559135777589</created>
@@ -234,17 +228,24 @@
       <option name="project" value="LOCAL" />
       <updated>1559136650054</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="axios">
+      <created>1559303448472</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1559303448473</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38177000" />
+    <option name="totallyTimeSpent" value="39453000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4863124" visible="true" weight="0.15252976" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4863124" visible="true" weight="0.15252976" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.5136876" side_tool="true" weight="0.15252976" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -272,7 +273,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="routing added" />
     <MESSAGE value="part of review comment fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="part of review comment fixed" />
+    <MESSAGE value="axios" />
+    <option name="LAST_COMMIT_MESSAGE" value="axios" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/App.css">
@@ -379,8 +381,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/loginPage/loginForm/LoginFormComponent.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        <state relative-caret-position="440">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
