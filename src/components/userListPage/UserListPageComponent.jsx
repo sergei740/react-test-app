@@ -1,16 +1,17 @@
 import React from "react";
 import UsersTable from "./usersListTable/Table";
 import UserListFormComponent from "./userListForm/UserListFormComponent";
+import { DataService } from "../../services/dataService";
 
 export default class UserListPageComponent extends React.Component {
   state = {
-    rows: [
-      { name: "BMW", email: 40000, password: 280 },
-      { name: "Audi", email: 40000, password: 280 },
-      { name: "Mercedes", email: 40000, password: 280 },
-      { name: "Opel", email: 40000, password: 280 }
-    ]
+    rows: []
   };
+
+  componentDidMount() {
+    DataService.getListUser();
+  }
+
 
   addUser = formData => {
     this.setState({ rows: [...this.state.rows, formData] });
