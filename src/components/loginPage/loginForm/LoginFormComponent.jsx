@@ -2,8 +2,10 @@ import React from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import { DataService } from "../../../services/dataService";
+import { withRouter } from "react-router-dom";
 
-export default class LoginFormComponent extends React.Component {
+
+class LoginFormComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,8 +21,7 @@ export default class LoginFormComponent extends React.Component {
   signIn = () => {
     DataService.signIn(this.state.login, this.state.password)
       .then(() => {
-        this.props.history.push('/UserListPageComponent');
-        // console.log(this);
+        this.props.history.push('/list');
       });
   };
 
@@ -29,7 +30,7 @@ export default class LoginFormComponent extends React.Component {
     return (
       <form className="loginForm">
         <TextField label="Name" id="login" value={ this.state.login } onInput={ e => this.onHandleChange(e) }/>
-        <TextField label="Password" id="password" value={ this.state.password }
+        <TextField label="Password" id="password" type="password" value={ this.state.password }
                    onInput={ e => this.onHandleChange(e) }/>
         <Button
           variant="contained"
@@ -42,3 +43,5 @@ export default class LoginFormComponent extends React.Component {
     );
   }
 }
+
+export default withRouter(LoginFormComponent);

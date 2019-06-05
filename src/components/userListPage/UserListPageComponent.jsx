@@ -3,23 +3,30 @@ import UsersTable from "./usersListTable/Table";
 import UserListFormComponent from "./userListForm/UserListFormComponent";
 import { DataService } from "../../services/dataService";
 
+
 export default class UserListPageComponent extends React.Component {
   state = {
     rows: []
   };
 
   componentDidMount() {
-    DataService.getListUser();
-  }
-
-
-  addUser = formData => {
-    this.setState({ rows: [...this.state.rows, formData] });
+    this.loadData();
   };
 
-  removeUser = deletedRow => {
-    const newState = this.state.rows.filter(row => row.name !== deletedRow.name);
-    this.setState({ rows: newState });
+  loadData = () => {
+    DataService.getListUser()
+      .then((data) => this.setState({ rows: data }));
+  };
+
+  addUser = ({ password, email, name }) => {
+    DataService.addUser(password, email, name)
+      .then(this.loadData);
+  };
+
+
+  removeUser = ({ _id }) => {
+    DataService.deleteUser(_id)
+      .then(this.loadData);
   };
 
   render() {
@@ -31,3 +38,4 @@ export default class UserListPageComponent extends React.Component {
     );
   }
 }
+

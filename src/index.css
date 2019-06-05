@@ -14,11 +14,27 @@ code {
 
 .form {
     display: flex;
+    flex-direction: column;
+}
+
+.form-errors {
+    color:red;
+    padding: 10px;
+    min-height: 70px;
+}
+.form-errors > p {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.form-inputs-buttons {
+    display: flex;
     align-items: baseline;
     justify-content: space-between;
     max-width: 800px;
     width: 100%;
-    margin: 50px auto;
+    margin: 50px auto 0;
 }
 
 .loginForm {
@@ -31,8 +47,7 @@ code {
     text-align: center;
 }
 
-
 .loginForm .loginFormBtn {
     width: 200px;
-    margin:40px auto;
+    margin: 40px auto;
 }
