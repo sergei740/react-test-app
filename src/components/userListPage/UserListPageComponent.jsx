@@ -11,12 +11,12 @@ export default class UserListPageComponent extends React.Component {
 
   componentDidMount() {
     this.loadData();
-  }
+  };
 
   loadData = () => {
     DataService.getListUser()
       .then((data) => this.setState({ rows: data }));
-  }
+  };
 
   addUser = ({ password, email, name }) => {
     DataService.addUser(password, email, name)

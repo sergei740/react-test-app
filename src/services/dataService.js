@@ -16,7 +16,7 @@ class DataServiceClass {
 
   logOut() {
     return removeLocalItem('token');
-  }
+  };
 
   getListUser() {
     const token = getLocalItem('token');
@@ -24,7 +24,7 @@ class DataServiceClass {
       .then(({ data }) => {
         return data;
       });
-  }
+  };
 
   addUser(password, email, name) {
     const token = getLocalItem('token');
@@ -33,12 +33,12 @@ class DataServiceClass {
       email,
       name
     }, { headers: { 'Authorization': "Bearer " + token } });
-  }
+  };
 
   deleteUser(id) {
     const token = getLocalItem('token');
     return this.httpService.delete(`users/${ id }`, { headers: { 'Authorization': "Bearer " + token } });
-  }
+  };
 }
 
 export const DataService = new DataServiceClass(httpService);

@@ -30,7 +30,7 @@ class LoginFormComponent extends React.Component {
     return (
       <form className="loginForm">
         <TextField label="Name" id="login" value={ this.state.login } onInput={ e => this.onHandleChange(e) }/>
-        <TextField label="Password" id="password" value={ this.state.password }
+        <TextField label="Password" id="password" type="password" value={ this.state.password }
                    onInput={ e => this.onHandleChange(e) }/>
         <Button
           variant="contained"
